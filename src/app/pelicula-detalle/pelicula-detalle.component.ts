@@ -13,6 +13,7 @@ export class PeliculaDetalleComponent implements OnInit {
   public generos:object;
   public compa_product:object;
   public idiomas:object;
+  public actores:object;
   public url_imagen='https://image.tmdb.org/t/p/w200/';
   constructor(private _router:ActivatedRoute,public peliculaservice:PeliculasService) { }
 
@@ -25,6 +26,11 @@ export class PeliculaDetalleComponent implements OnInit {
       this.compa_product=resultado['production_companies'];
       this.idiomas=resultado['spoken_languages']
     })
+    this.peliculaservice.buscarActores(this.id)
+    .subscribe(resultado=>{
+      this.actores=resultado['cast']
+    })
   }
+
 
 }

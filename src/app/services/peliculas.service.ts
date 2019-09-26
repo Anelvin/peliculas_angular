@@ -36,4 +36,7 @@ export class PeliculasService {
   buscarGenerosPeliculas(){
     return this.http.get(`https://api.themoviedb.org/3/genre/movie/list?api_key=7a5ab1a16890bdb75e5ffef8bd2ce921&language=en-US`)
   }
+  buscarActores(id){
+    return this.http.get(`https://api.themoviedb.org/3/movie/${id}/credits?api_key=7a5ab1a16890bdb75e5ffef8bd2ce921`)
+  }
 }

@@ -1,0 +1,23 @@
+<div class="datosActor">
+  <div class="contenedorDatos">
+    <div>
+      <img src={{url_imagen+actor.profile_path}} alt="" *ngIf="actor.profile_path!=null">
+      <img src='../../assets/img/no_photo.jpg' alt=""
+      *ngIf="actor.profile_path==null">
+    </div>
+   
+    <div class="datosPersonales">
+      <h2>{{actor.name}}</h2>
+      <div >
+          <span>{{actor.known_for_department}}</span>
+          <span>{{actor.popularity}}👍🏻</span>
+          <span>{{actor.birthday}}</span>
+          <span>{{actor.place_of_birth}}</span>
+      </div>
+      <p>
+        {{actor.biography}}
+      </p>
+    </div>
+  </div>
+
+</div>
