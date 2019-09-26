@@ -8,11 +8,26 @@ export class PeliculasService {
 
   constructor(public http:HttpClient) { }
 
-  buscarPeliculasPopulares(page:string){
-   return this.http.get(`https://api.themoviedb.org/3/movie/popular?api_key=7a5ab1a16890bdb75e5ffef8bd2ce921&page=${page}`)
+  buscarPeliculasPopulares(page:string,generos){
+    if(generos.length > 12){
+      return this.http.get(`https://api.themoviedb.org/3/movie/popular?api_key=7a5ab1a16890bdb75e5ffef8bd2ce921&page=${page}${generos}`)
+    }else{
+      return this.http.get(`https://api.themoviedb.org/3/movie/popular?api_key=7a5ab1a16890bdb75e5ffef8bd2ce921&page=${page}`);
+    }
   }
-  buscarPeliculasEnCine(pagina){
-    return this.http.get(`https://api.themoviedb.org/3/movie/now_playing?api_key=7a5ab1a16890bdb75e5ffef8bd2ce921&language=en-US&page=${pagina}`)
+  peliculasPopularesGeneros(page,generos){
+    if(generos.length > 12){
+      return this.http.get(`https://api.themoviedb.org/3/movie/popular?api_key=7a5ab1a16890bdb75e5ffef8bd2ce921&page=${page}${generos}`)
+    }else{
+      return this.http.get(`https://api.themoviedb.org/3/movie/popular?api_key=7a5ab1a16890bdb75e5ffef8bd2ce921&page=${page}`);
+    }
+  }
+  buscarPeliculasEnCine(pagina,generos){
+    if(generos.length > 12){
+      return this.http.get(`https://api.themoviedb.org/3/movie/now_playing?api_key=7a5ab1a16890bdb75e5ffef8bd2ce921&language=en-US&page=${pagina}${generos}`)
+    }else{
+      return this.http.get(`https://api.themoviedb.org/3/movie/now_playing?api_key=7a5ab1a16890bdb75e5ffef8bd2ce921&language=en-US&page=${pagina}`)
+    }
   }
   buscarPeliculaDetalle(id){
     return this.http.get(`https://api.themoviedb.org/3/movie/${id}?api_key=7a5ab1a16890bdb75e5ffef8bd2ce921&language=en-US

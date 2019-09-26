@@ -11,19 +11,20 @@ export class PopularesComponent implements OnInit {
   public pagina = 1;
   public generos=[];
   public generosFiltrado;
-  public queryGeneros=''
+  public queryGeneros='';
+  public queryFiltrado='';
   public url_imagen = 'https://image.tmdb.org/t/p/w200/'
   constructor(public peliculasservice: PeliculasService) { }
 
   ngOnInit() {
-    this.peliculasservice.buscarPeliculasPopulares(this.pagina + '')
+    this.peliculasservice.buscarPeliculasPopulares(this.pagina + '',this.queryFiltrado)
       .subscribe(resultado => this.peliculas = resultado['results']), () => {
         console.log(this.peliculas);
       };
   }
 
   paginaSiguiente() {
-    this.peliculasservice.buscarPeliculasPopulares(++this.pagina + '')
+    this.peliculasservice.buscarPeliculasPopulares(++this.pagina + '',this.queryFiltrado)
       .subscribe(
         resultado => this.peliculas = resultado['results'],
         error => console.log(error))
@@ -31,7 +32,7 @@ export class PopularesComponent implements OnInit {
 
   paginaAnterior(){
     if(this.pagina>1){
-      this.peliculasservice.buscarPeliculasPopulares(--this.pagina + '')
+      this.peliculasservice.buscarPeliculasPopulares(--this.pagina + '',this.queryFiltrado)
       .subscribe(
         resultado => this.peliculas = resultado['results'],
         error => console.log(error))
@@ -42,16 +43,28 @@ export class PopularesComponent implements OnInit {
   imprimir() {
     console.log(this.peliculas);
   }
-  filtroGeneros(t){
-    this.generos.push(t);
-    this.queryGeneros='&width_genres=';
-    for(let x=0;x<this.generos.length;x++){
 
+
+  filtroGeneros(t){
+    let existe=0;
+    this.queryGeneros='&with_genres=';
+    for(let x=0;x<this.generos.length;x++){
+      if(this.generos[x]==t){
+        existe++;
+        this.generos.splice(x,1);
+      }
+    }
+    if(existe==0){
+      this.generos.push(t);
     }
     for(let x=0;x<this.generos.length;x++){
       this.queryGeneros += `${this.generos[x]},`
     }
-    console.log(this.queryGeneros);
+    this.queryFiltrado=this.queryGeneros.substring(0, this.queryGeneros.length-1);
+    this.peliculasservice.peliculasPopularesGeneros(this.pagina,this.queryFiltrado)
+    .subscribe(
+      resultado=>this.peliculas=resultado['results'],
+    )
   }
 
 }
