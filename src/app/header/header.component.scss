@@ -1,0 +1,31 @@
+header{
+    display:flex;
+    flex-direction:row;
+    background-color:#191d25;
+    color:#ffffff;
+    justify-content: space-between;
+    align-items:center;
+    position: fixed;
+    width:100%;
+    box-shadow: 2px 2px 2px 2px #1e2127;
+    z-index: 1;
+    div{
+        display:flex;
+        flex-direction: row;
+        align-items:center;
+        padding: 1vh 1vw;
+        h1{
+            margin-left:1vw;
+        }
+        a{
+            all:unset;
+            margin:0 1vw;
+            font-size: 1.2rem;
+            cursor: pointer;
+        }
+    }
+    img{
+        width: 5vw;
+        height:10vh;
+    }
+}

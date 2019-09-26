@@ -1,0 +1,9 @@
+<div class="componenteGeneros">
+    <h5>Géneros</h5>
+    <div class="contenedorGeneros">
+        <div class="contenedorInputs" *ngFor="let genero of generos">
+            <input  type="checkbox" name={{genero.name}} id={{genero.id}} value={{genero.name}} (click)="filtrarGeneros($event)">
+            <span>{{genero.name}}</span>
+        </div>
+    </div>
+</div>

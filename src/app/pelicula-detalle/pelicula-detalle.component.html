@@ -1,0 +1,38 @@
+<div class="contenedor">
+        <div class="peliculaDetalle">
+                <div>
+                    <img src={{url_imagen+pelicula.poster_path}} alt={{pelicula.title}}>
+                </div>
+                <div>
+                    <div class="titulo">
+                        <h2>{{pelicula.title}}</h2>
+                    </div>
+                    <div class="duracionFecha">
+                        <span>{{pelicula.runtime}}min</span> 
+                        <span>{{pelicula.release_date}}</span>
+                    </div>
+                    <div class="idiomas">
+                        <span *ngFor="let idioma of idiomas">
+                            {{idioma.name}}
+                        </span>
+                    </div>
+                    <div class="descripcion">
+                        <p>{{pelicula.overview}}</p>
+                    </div>
+                    <div class="valoraciones">
+                        <span>{{pelicula.vote_average}}⭐</span>
+                        <span>{{pelicula.vote_count}}👍🏻</span>
+                    </div>
+                    <div class="generos">
+                        <span *ngFor="let genero of generos">{{genero.name}}</span>
+                    </div>
+                    <div class="companiesProduction">
+                        <span *ngFor="let company of compa_product ">
+                            <img src={{url_imagen+company.logo_path}} alt="">
+                        </span>
+                    </div>
+                </div>
+                    
+            </div>
+            
+</div>

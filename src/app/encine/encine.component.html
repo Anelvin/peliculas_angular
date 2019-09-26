@@ -1,0 +1,19 @@
+<h1>Películas En Cine</h1>
+<div class="contenedorPeliculas">
+    <div class="contendorPelicula" *ngFor="let pelicula of peliculas">
+        <img class="" src="{{url_imagen+pelicula.poster_path}}" alt="">
+        <div class="descripcionPelicula">
+            <h5>{{pelicula.title}}</h5>
+            <p>{{pelicula.vote_average}} ★</p>
+            <a [routerLink]="['/peliculas/',pelicula.id]">
+                Ver más detalles
+            </a>
+            <p>{{pelicula.overview}}</p>
+        </div>
+    </div>
+</div>
+
+<div class="botonesPaginacion">
+    <button class="btn btn-info mr-1" (click)="paginaAnterior()">Anterior</button>
+    <button class="btn btn-info mr-1" (click)="paginaSiguiente()">Siguiente</button>
+</div>

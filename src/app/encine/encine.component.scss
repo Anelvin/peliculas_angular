@@ -1,0 +1,40 @@
+h1{
+    text-align:center;
+    padding-top:7vw;
+    background-color:#191d25;
+    color:white;
+    margin:0;
+}
+.contenedorPeliculas{
+    display:flex;
+    flex-direction:row;
+    flex-wrap:wrap;
+    justify-content: center;
+    padding-top:2vw;
+    background-color:#191d25;
+
+    .contendorPelicula{
+        display:flex;
+        flex-direction: row;
+        width:30%;
+        height:40vh;
+        margin:1vw;
+        border:1px solid #000000;
+        padding:1vw;
+        border-radius: 1em;
+        background-color:#f1efef;
+        img{
+            margin-right:1vw;
+        }
+        .descripcionPelicula{
+            overflow:auto;
+        }
+    }
+}
+.botonesPaginacion{
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+    background-color:#191d25;
+    padding:2vw 0; 
+}
