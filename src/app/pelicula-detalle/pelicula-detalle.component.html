@@ -1,4 +1,8 @@
-<div class="contenedor">
+<div *ngIf="loading==false">
+    <app-loading >
+    </app-loading>
+</div>
+<div class="contenedor" *ngIf="loading!==false">
   <div class="peliculaDetalle">
     <div>
       <img src={{url_imagen+pelicula.poster_path}} alt={{pelicula.title}}>
@@ -15,6 +19,9 @@
         <span *ngFor="let idioma of idiomas">
           {{idioma.name}}
         </span>
+      </div>
+      <div>
+        <a href='https://www.youtube.com/watch?v={{video[0].key}}' target="_blank">Ver trailer</a>
       </div>
       <div class="descripcion">
         <p>{{pelicula.overview}}</p>

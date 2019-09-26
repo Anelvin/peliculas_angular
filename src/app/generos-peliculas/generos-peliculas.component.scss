@@ -3,10 +3,10 @@
     display: flex;
     flex-direction: column;
     position: relative;
-    background-color:#191d25;
+    background-color:white;
     color:#000000;
     h5{
-        color:white;
+        color:black;
         margin-left:1vw;
     }
     .contenedorGeneros{
@@ -17,15 +17,17 @@
         flex-wrap: wrap;
         overflow: auto;
         margin-left:1vw;
-        background-color:#f1efef;
+        background-color:white;
         padding:1vw;
         border-radius:4px;
+        box-shadow: 2px 2px 2px 2px #000000;
         .contenedorInputs{
             position: relative;
             display:flex;
             overflow: auto;
             align-items:center;
-            background-color:#f1efef;
+            background-color:white;
+            color:black;
         }
     }
 }

@@ -39,4 +39,18 @@ export class PeliculasService {
   buscarActores(id){
     return this.http.get(`https://api.themoviedb.org/3/movie/${id}/credits?api_key=7a5ab1a16890bdb75e5ffef8bd2ce921`)
   }
+  buscarVideos(id){
+    return this.http.get(`https://api.themoviedb.org/3/movie/${id}/videos?api_key=7a5ab1a16890bdb75e5ffef8bd2ce921&language=en-US`)
+  }
+  tendenciasPeliculas(){
+    return this.http.get(`https://api.themoviedb.org/3/trending/movie/day?api_key=7a5ab1a16890bdb75e5ffef8bd2ce921`)
+  }
+  buscarTv(){
+    return this.http.get(`https://api.themoviedb.org/3/trending/tv/day?api_key=7a5ab1a16890bdb75e5ffef8bd2ce921
+    `)
+  }
+  buscarPersona(){
+    return this.http.get(`https://api.themoviedb.org/3/trending/person/day?api_key=7a5ab1a16890bdb75e5ffef8bd2ce921
+    `)
+  }
 }

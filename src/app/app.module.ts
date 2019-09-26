@@ -11,6 +11,7 @@ import { PeliculaDetalleComponent } from './pelicula-detalle/pelicula-detalle.co
 import { GenerosPeliculasComponent } from './generos-peliculas/generos-peliculas.component';
 import { LoadingComponent } from './loading/loading.component';
 import { ActorDetalleComponent } from './actor-detalle/actor-detalle.component';
+import { HomeComponent } from './home/home.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { ActorDetalleComponent } from './actor-detalle/actor-detalle.component';
     PeliculaDetalleComponent,
     GenerosPeliculasComponent,
     LoadingComponent,
-    ActorDetalleComponent
+    ActorDetalleComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,

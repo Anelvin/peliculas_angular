@@ -1,7 +1,7 @@
 header{
     display:flex;
     flex-direction:row;
-    background-color:#191d25;
+    background-color:#000000;
     color:#ffffff;
     justify-content: space-between;
     align-items:center;
@@ -9,7 +9,13 @@ header{
     width:100%;
     box-shadow: 2px 2px 2px 2px #1e2127;
     z-index: 1;
-    div{
+    .redireccionHome a{
+        display:flex;
+        flex-direction: row;
+        color:white;
+        align-items: center;
+    }
+    .tiposPeliculas{
         display:flex;
         flex-direction: row;
         align-items:center;

@@ -1,4 +1,9 @@
-<div class="datosActor">
+<div *ngIf="loading==false">
+  <app-loading >
+  </app-loading>
+</div>
+
+<div class="datosActor" *ngIf="loading==true">
   <div class="contenedorDatos">
     <div>
       <img src={{url_imagen+actor.profile_path}} alt="" *ngIf="actor.profile_path!=null">

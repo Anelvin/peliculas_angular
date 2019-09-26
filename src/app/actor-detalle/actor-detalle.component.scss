@@ -1,9 +1,9 @@
 .datosActor{
     position: relative;
     display: flex;
-    background-color:#191d25;
+    background-color:white;
     min-height: 100vh;
-    color:white;
+    color:black;
     .contenedorDatos{
         display:flex;
         flex-direction: row;
@@ -14,6 +14,7 @@
                 width:20vw;
                 border-radius:2em;
                 margin-right:2vw;
+                box-shadow: 2px 2px 2px 2px #000000;
             }
         }
         .datosPersonales{

@@ -1,8 +1,8 @@
 h1{
     text-align:center;
     padding-top:7vw;
-    background-color:#191d25;
-    color:white;
+    background-color:white;
+    color:black;
     margin:0;
 }
 .contenedorPeliculas{
@@ -11,22 +11,25 @@ h1{
     flex-wrap:wrap;
     justify-content: center;
     padding-top:2vw;
-    background-color:#191d25;
+    background-color:white;
     .contendorPelicula{
         display:flex;
         flex-direction: row;
         width:30%;
         height:40vh;
         margin:1vw;
-        border:1px solid #f1efef;
+        border:1px solid white;
         padding:1vw;
         border-radius: 1em;
-        background-color:#f1efef;
-
+        background-color:white;
+        box-shadow: 2px 2px 2px 2px #000000;
         a{
         }
         img{
             margin-right:1vw;
+            box-shadow: 2px 2px 2px 2px #000000;
+            border-radius:1em;
+
             }
         .descripcionPelicula{
             overflow:auto;
@@ -38,6 +41,6 @@ h1{
     display:flex;
     flex-direction: row;
     justify-content: center;
-    background-color:#191d25;
+    background-color:white;
     padding:2vw 0; 
 }

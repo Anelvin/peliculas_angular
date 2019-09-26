@@ -4,9 +4,14 @@ import { HeaderComponent } from './header/header.component';
 import { EncineComponent } from './encine/encine.component';
 import {PopularesComponent} from './populares/populares.component';
 import {PeliculaDetalleComponent} from './pelicula-detalle/pelicula-detalle.component'
-import {ActorDetalleComponent} from './actor-detalle/actor-detalle.component'
+import {ActorDetalleComponent} from './actor-detalle/actor-detalle.component';
+import {HomeComponent} from './home/home.component'
 
 const routes: Routes = [
+{
+  path:'',
+  component:HomeComponent,
+},
 {
   path:'peliculas',
   component:HeaderComponent,
