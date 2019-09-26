@@ -9,6 +9,7 @@ import { EncineComponent } from './encine/encine.component';
 import { PopularesComponent } from './populares/populares.component';
 import { PeliculaDetalleComponent } from './pelicula-detalle/pelicula-detalle.component';
 import { GenerosPeliculasComponent } from './generos-peliculas/generos-peliculas.component';
+import { LoadingComponent } from './loading/loading.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { GenerosPeliculasComponent } from './generos-peliculas/generos-peliculas
     EncineComponent,
     PopularesComponent,
     PeliculaDetalleComponent,
-    GenerosPeliculasComponent
+    GenerosPeliculasComponent,
+    LoadingComponent
   ],
   imports: [
     BrowserModule,

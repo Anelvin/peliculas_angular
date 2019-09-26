@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { PeliculasService } from '../services/peliculas.service'
+import { ThrowStmt } from '@angular/compiler';
 
 @Component({
   selector: 'app-populares',
@@ -10,6 +11,7 @@ export class PopularesComponent implements OnInit {
   public peliculas: object;
   public pagina = 1;
   public generos=[];
+  public loading=false;
   public generosFiltrado;
   public queryGeneros='';
   public queryFiltrado='';
@@ -18,24 +20,31 @@ export class PopularesComponent implements OnInit {
 
   ngOnInit() {
     this.peliculasservice.buscarPeliculasPopulares(this.pagina + '',this.queryFiltrado)
-      .subscribe(resultado => this.peliculas = resultado['results']), () => {
-        console.log(this.peliculas);
-      };
+      .subscribe(resultado =>{
+        this.peliculas = resultado['results'];
+        this.loading=true
+      });
   }
 
   paginaSiguiente() {
+    this.loading=false;
     this.peliculasservice.buscarPeliculasPopulares(++this.pagina + '',this.queryFiltrado)
       .subscribe(
-        resultado => this.peliculas = resultado['results'],
-        error => console.log(error))
+        resultado => {
+         this.peliculas = resultado['results'];
+         this.loading=true
+        })
   }
 
   paginaAnterior(){
+    this.loading=false;
     if(this.pagina>1){
       this.peliculasservice.buscarPeliculasPopulares(--this.pagina + '',this.queryFiltrado)
       .subscribe(
-        resultado => this.peliculas = resultado['results'],
-        error => console.log(error))
+        resultado => {
+         this.peliculas = resultado['results'];
+         this.loading=true
+        })
     }
   }
   

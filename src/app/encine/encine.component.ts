@@ -10,28 +10,45 @@ export class EncineComponent implements OnInit {
   public generos=[];
   public queryGeneros='';
   public queryFiltrado='';
+  public loading=false;
   public url_imagen = 'https://image.tmdb.org/t/p/w200/'
   public peliculas:object;
   constructor(public peliculasservice:PeliculasService) { }
 
   ngOnInit() {
+    this.loading=false;
     this.peliculasservice.buscarPeliculasEnCine(this.pagina,this.queryFiltrado)
-    .subscribe(resultado=>this.peliculas=resultado['results'])
+    .subscribe(resultado=>{
+      this.peliculas=resultado['results'];
+      this.loading=true
+      }
+    )
   }
 
   paginaSiguiente(){
+    this.loading=false;
     this.peliculasservice.buscarPeliculasEnCine(++this.pagina,this.queryFiltrado)
-    .subscribe(resultado=>this.peliculas=resultado['results'])
+    .subscribe(resultado=>{
+      this.peliculas=resultado['results'];
+      this.loading=true
+      }
+    )
   }
 
   paginaAnterior(){
+    this.loading=false;
     if(this.pagina>1){
       this.peliculasservice.buscarPeliculasEnCine(--this.pagina,this.queryFiltrado)
-    .subscribe(resultado=>this.peliculas=resultado['results'])
+      .subscribe(resultado=>{
+        this.peliculas=resultado['results'];
+        this.loading=true
+        }
+      )
     }
   }
 
   filtroGeneros(t){
+    this.loading=false;
     let existe=0;
     this.queryGeneros='&with_genres=';
     for(let x=0;x<this.generos.length;x++){
@@ -48,8 +65,10 @@ export class EncineComponent implements OnInit {
     }
     this.queryFiltrado=this.queryGeneros.substring(0, this.queryGeneros.length-1);
     this.peliculasservice.peliculasPopularesGeneros(this.pagina,this.queryFiltrado)
-    .subscribe(
-      resultado=>this.peliculas=resultado['results'],
+    .subscribe(resultado=>{
+      this.peliculas=resultado['results'];
+      this.loading=true
+      }
     )
   }
 }
