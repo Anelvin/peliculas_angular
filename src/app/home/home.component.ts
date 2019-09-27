@@ -10,10 +10,12 @@ export class HomeComponent implements OnInit {
   public tendenciasPeliculas:object;
   public tendenciasTv:object;
   public tendenciasPersonas:object;
+  public loading=false;
   public url_imagen='https://image.tmdb.org/t/p/w200/'
   constructor(public peliculasservice:PeliculasService) { }
 
   ngOnInit() {
+    this.loading=false;
     this.peliculasservice.tendenciasPeliculas()
     .subscribe(resultado=>{
       this.tendenciasPeliculas=resultado['results'];
@@ -26,6 +28,7 @@ export class HomeComponent implements OnInit {
     .subscribe(resultado=>{
       this.tendenciasPersonas=resultado['results']
     })
+    this.loading=true;
   }
 
 }

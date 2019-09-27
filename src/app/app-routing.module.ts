@@ -5,7 +5,9 @@ import { EncineComponent } from './encine/encine.component';
 import {PopularesComponent} from './populares/populares.component';
 import {PeliculaDetalleComponent} from './pelicula-detalle/pelicula-detalle.component'
 import {ActorDetalleComponent} from './actor-detalle/actor-detalle.component';
-import {HomeComponent} from './home/home.component'
+import {HomeComponent} from './home/home.component';
+import {CompanyDetalleComponent} from './company-detalle/company-detalle.component';
+import {PeliculasSimilaresComponent} from './peliculas-similares/peliculas-similares.component'
 
 const routes: Routes = [
 {
@@ -25,8 +27,16 @@ const routes: Routes = [
   component:PopularesComponent,
 },
 {
+  path:'peliculas/similares/:id',
+  component:PeliculasSimilaresComponent
+},
+{
   path:'peliculas/:id',
   component:PeliculaDetalleComponent
+},
+{
+  path:'peliculas/company/:company',
+  component:CompanyDetalleComponent
 },
 {
   path:'peliculas/:id/:actor',

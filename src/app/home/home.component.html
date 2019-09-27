@@ -1,49 +1,56 @@
-<h1>Tendencias</h1>
 
-<div>
-  <h2 class="tituloTendencia">Películas</h2>
-  <div class="contenedorImagenes">
-    <ul>
-      <li>
-        <span *ngFor="let tendencia of tendenciasPeliculas" class="contenedorImagen">
-          <a [routerLink]="['/peliculas/',tendencia.id]">
-            <img src={{url_imagen+tendencia.poster_path}} alt="">
-            <span class="title">{{tendencia.title}}</span>
-          </a>
-        </span>
-      </li>
-    </ul>
-  </div>
+<div *ngIf="loading==false">
+  <app-loading >
+  </app-loading>
 </div>
 
-<div>
-  <h2 class="tituloTendencia">TV</h2>
-  <div class="contenedorImagenes">
-    <ul>
-      <li>
-        <span *ngFor="let tendencia of tendenciasTv" class="contenedorImagen">
-          <a [routerLink]="['/peliculas/:id',tendencia.id]">
-            <img src={{url_imagen+tendencia.poster_path}} alt="">
-            <span class="title">{{tendencia.name}}</span>
-          </a>
-        </span>
-      </li>
-    </ul>
+<div *ngIf="loading==true">
+  <h1>Tendencias</h1>
+  <div>
+    <h2 class="tituloTendencia">Películas</h2>
+    <div class="contenedorImagenes">
+      <ul>
+        <li>
+          <span *ngFor="let tendencia of tendenciasPeliculas" class="contenedorImagen">
+            <a [routerLink]="['/peliculas/',tendencia.id]">
+              <img src={{url_imagen+tendencia.poster_path}} alt="">
+              <span class="title">{{tendencia.title}}</span>
+            </a>
+          </span>
+        </li>
+      </ul>
+    </div>
   </div>
-</div>
-
-<div>
-  <h2 class="tituloTendencia">Personas</h2>
-  <div class="contenedorImagenes">
-    <ul>
-      <li>
-        <span *ngFor="let tendencia of tendenciasPersonas" class="contenedorImagen">
-          <a [routerLink]="['/peliculas/:id',tendencia.id]">
-            <img src={{url_imagen+tendencia.profile_path}} alt="">
-            <span class="title">{{tendencia.name}}</span>
-          </a>
-        </span>
-      </li>
-    </ul>
+  
+  <div>
+    <h2 class="tituloTendencia">TV</h2>
+    <div class="contenedorImagenes">
+      <ul>
+        <li>
+          <span *ngFor="let tendencia of tendenciasTv" class="contenedorImagen">
+            <a [routerLink]="['/peliculas/:id',tendencia.id]">
+              <img src={{url_imagen+tendencia.poster_path}} alt="">
+              <span class="title">{{tendencia.name}}</span>
+            </a>
+          </span>
+        </li>
+      </ul>
+    </div>
   </div>
+  
+  <div>
+    <h2 class="tituloTendencia">Personas</h2>
+    <div class="contenedorImagenes">
+      <ul class="diseñoScroll">
+        <li>
+          <span *ngFor="let tendencia of tendenciasPersonas" class="contenedorImagen">
+            <a [routerLink]="['/peliculas/:id',tendencia.id]">
+              <img src={{url_imagen+tendencia.profile_path}} alt="">
+              <span class="title">{{tendencia.name}}</span>
+            </a>
+          </span>
+        </li>
+      </ul>
+    </div>
+  </div>  
 </div>

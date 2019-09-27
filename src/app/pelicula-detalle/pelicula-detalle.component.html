@@ -1,6 +1,6 @@
 <div *ngIf="loading==false">
-    <app-loading >
-    </app-loading>
+  <app-loading>
+  </app-loading>
 </div>
 <div class="contenedor" *ngIf="loading!==false">
   <div class="peliculaDetalle">
@@ -21,7 +21,7 @@
         </span>
       </div>
       <div>
-        <a href='https://www.youtube.com/watch?v={{video[0].key}}' target="_blank">Ver trailer</a>
+        <a href='https://www.youtube.com/watch?v={{video[0].key}}' target="_blank">Ver tráiler</a>
       </div>
       <div class="descripcion">
         <p>{{pelicula.overview}}</p>
@@ -35,17 +35,21 @@
       </div>
       <div class="companiesProduction">
         <span *ngFor="let company of compa_product ">
-          <img src={{url_imagen+company.logo_path}} alt="">
+          <a [routerLink]="['/peliculas/company',company.id]">
+            <img src={{url_imagen+company.logo_path}} alt="">
+          </a>
         </span>
       </div>
+      <div class="similares">
+        <a [routerLink]="['/peliculas/similares',pelicula.id]">
+          Peliculas similares
+        </a>
+      </div>
     </div>
-
   </div>
   <div class="actores">
-    <p>
-        <a *ngFor="let actor of actores" [routerLink]="['/peliculas',pelicula.id,actor.id]">
-            {{actor.name}}-
-        </a>
-    </p>
+    <a *ngFor="let actor of actores" [routerLink]="['/peliculas',pelicula.id,actor.id]">
+      {{actor.name}}-
+    </a>
   </div>
 </div>

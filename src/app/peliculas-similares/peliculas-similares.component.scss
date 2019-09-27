@@ -23,8 +23,7 @@ h1{
         border-radius: 1em;
         background-color:white;
         box-shadow: 2px 2px 2px 2px #000000;
-        a{
-        }
+       
         img{
             margin-right:1vw;
             box-shadow: 2px 2px 2px 2px #000000;
@@ -48,11 +47,4 @@ h1{
           border-radius: 1em;
         }
     }
-}
-.botonesPaginacion{
-    display:flex;
-    flex-direction: row;
-    justify-content: center;
-    background-color:white;
-    padding:2vw 0; 
 }
