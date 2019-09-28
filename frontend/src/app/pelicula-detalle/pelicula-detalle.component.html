@@ -44,12 +44,15 @@
         <a [routerLink]="['/peliculas/similares',pelicula.id]">
           Peliculas similares
         </a>
+        <a [routerLink]="['/peliculas/opiniones',pelicula.id]">
+          Opinones
+        </a>
       </div>
     </div>
   </div>
   <div class="actores">
-    <a *ngFor="let actor of actores" [routerLink]="['/peliculas',pelicula.id,actor.id]">
-      {{actor.name}}-
+    <a *ngFor="let actor of actores"  [routerLink]="['/peliculas',pelicula.id,actor.id]">
+      {{actor.name}} --
     </a>
   </div>
 </div>

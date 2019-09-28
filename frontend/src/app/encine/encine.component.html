@@ -4,7 +4,7 @@
 </div>
 
 <div *ngIf="loading==true">
-  <h1>Películas En Cine</h1>
+  <h1>Películas En Cartelera</h1>
   <app-generos-peliculas (obtenerGeneros)="filtroGeneros($event)"></app-generos-peliculas>
   <div class="contenedorPeliculas">
     <div class="contendorPelicula" *ngFor="let pelicula of peliculas">

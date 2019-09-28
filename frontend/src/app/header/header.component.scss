@@ -23,12 +23,13 @@ header{
         h1{
             margin-left:1vw;
         }
-        a{
-            all:unset;
-            margin:0 1vw;
-            font-size: 1.2rem;
-            cursor: pointer;
-        }
+       select{
+           margin:0 1vw;
+           background-color:black;
+           color:white;
+           border-radius:1em;
+       }
+       
     }
     img{
         width: 5vw;

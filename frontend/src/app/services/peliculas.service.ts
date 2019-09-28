@@ -57,4 +57,15 @@ export class PeliculasService {
     return this.http.get(`https://api.themoviedb.org/3/movie/${id}/similar?api_key=7a5ab1a16890bdb75e5ffef8bd2ce921&language=en-US&page=1
     `)
   }
+  opinionesPeliculas(id){
+    return this.http.get(`https://api.themoviedb.org/3/movie/${id}/reviews?api_key=7a5ab1a16890bdb75e5ffef8bd2ce921&language=en-US&page=1
+    `)
+  }
+  peliculasMejorCalificadas(page,generos){
+    if(generos.length>12){
+      return this.http.get(`https://api.themoviedb.org/3/movie/top_rated?api_key=7a5ab1a16890bdb75e5ffef8bd2ce921&language=en-US&page=${page}${generos}`)
+    }else{
+      return this.http.get(`https://api.themoviedb.org/3/movie/top_rated?api_key=7a5ab1a16890bdb75e5ffef8bd2ce921&language=en-US&page=${page}`)
+    }
+  }
 }
