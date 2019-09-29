@@ -61,3 +61,138 @@
     }
   }
 }
+
+@media (max-width:1200px){
+  .contenedor{
+    .contenedorPeliculas{
+     
+      .contendorPelicula{
+        display:flex;
+        flex-direction: column;
+        align-items: center;
+        width:30%;
+        img{
+          width:10vw;
+          height:20vh;
+        }
+        .descripcionPelicula{
+          p{
+            text-align: justify;
+            font-size:1.5vw;
+          }
+          a{
+            font-size:1.5vw;
+          }
+          h5{
+            font-size:2vw;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width:1000px){
+  .contenedor{
+    .contenedorPeliculas{
+      display:flex;
+      flex-direction:row;
+      flex-wrap:wrap;
+      .contendorPelicula{
+        display:flex;
+        flex-direction: column;
+        align-items: center;
+        width:45%;
+        img{
+          width:15vw;
+          height:20vh;
+        }
+        .descripcionPelicula{
+          p{
+            text-align: justify;
+            font-size:2vw;
+          }
+          a{
+            font-size:2vw;
+          }
+          h5{
+            font-size:3vw;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width:800px){
+  .contenedor{
+    .contenedorPeliculas{
+      display:flex;
+      flex-direction:row;
+      flex-wrap:wrap;
+      .contendorPelicula{
+        display:flex;
+        flex-direction: column;
+        align-items: center;
+        width:45%;
+        img{
+          width:20vw;
+          height:20vh;
+        }
+        .descripcionPelicula{
+          p{
+            text-align: justify;
+            font-size:2vw;
+          }
+          a{
+            font-size:2vw;
+          }
+          h5{
+            font-size:3vw;
+          }
+        }
+      }
+    }
+  }
+}
+@media (max-width:500px){
+  .contenedor{
+    .imagenPerfil{
+      img{
+        width:30vw;
+      }
+      div{
+        h1{
+          font-size:5vw;
+        }
+      }
+    }
+    .contenedorPeliculas{
+      display:flex;
+      flex-direction:row;
+      flex-wrap:wrap;
+      .contendorPelicula{
+        display:flex;
+        flex-direction: column;
+        align-items: center;
+        width:70%;
+        img{
+          width:20vw;
+          height:20vh;
+        }
+        .descripcionPelicula{
+          p{
+            text-align: justify;
+            font-size:2vw;
+          }
+          a{
+            font-size:2vw;
+          }
+          h5{
+            font-size:3vw;
+          }
+        }
+      }
+    }
+  }
+}

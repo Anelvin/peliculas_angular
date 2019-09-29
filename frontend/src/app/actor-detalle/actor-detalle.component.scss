@@ -1,32 +1,75 @@
-.datosActor{
-    position: relative;
+.datosActor {
+  position: relative;
+  display: flex;
+  background-color: white;
+  min-height: 100vh;
+  color: black;
+
+  .contenedorDatos {
     display: flex;
-    background-color:white;
-    min-height: 100vh;
-    color:black;
-    .contenedorDatos{
-        display:flex;
-        flex-direction: row;
-        margin-top:10vw;
-        padding:0 10%;
-        div{
-            img{
-                width:20vw;
-                border-radius:2em;
-                margin-right:2vw;
-                box-shadow: 2px 2px 2px 2px #000000;
-            }
+    flex-direction: row;
+    margin-top: 10vw;
+    padding: 0 10%;
+
+    div {
+      img {
+        width: 20vw;
+        border-radius: 2em;
+        margin-right: 2vw;
+        box-shadow: 2px 2px 2px 2px #000000;
+      }
+    }
+    p{
+        text-align:justify;
+    }
+
+    .datosPersonales {
+      div {
+        span {
+          padding-right: 1vw;
+
         }
-        .datosPersonales{
-            div{
-                span{
-                    padding-right:1vw;
-                    
-                }
-            }
-            p{
-                margin-top:1vw;
-            }
+      }
+
+      p {
+        margin-top: 1vw;
+      }
+    }
+  }
+}
+@media(max-width:900px){
+    .datosActor{
+        .contenedorDatos{
+            margin-top:15vw;
         }
     }
+    }
+@media(max-width:600px) {
+  .datosActor {
+    .contenedorDatos {
+      display: flex;
+      flex-direction: column;
+
+      .datosPersonales {
+        h2 {
+          font-size: 5vw;
+        }
+
+        div {
+          span {
+            font-size: 3vw;
+          }
+
+          a {
+            font-size: 3vw;
+          }
+        }
+
+        p {
+          text-align: justify;
+          font-size: 3vw;
+        }
+      }
+    }
+  }
 }

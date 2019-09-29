@@ -41,3 +41,27 @@ header{
         height:10vh;
     }
 }
+@media (max-width:600px){
+    header{
+        img{
+            width:3vw;
+            height:3vh;
+        }
+        h1{
+            font-size:4vw;
+        }
+        .busqueda{
+            a{
+                font-size:3vw;
+            }
+        }
+        .tiposPeliculas{
+            span{
+                display:none;
+            }
+            select{
+               font-size:3vw;
+            }
+        }
+    }
+}
