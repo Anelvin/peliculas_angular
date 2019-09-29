@@ -1,0 +1,30 @@
+<div *ngIf="loading==false">
+  <app-loading>
+  </app-loading>
+</div>
+<div class="contenedor" *ngIf="loading==true">
+  <div class="imagenPerfil">
+    <img src={{url_imagen+actor.profile_path}} alt="">
+    <div>
+      <h1>{{actor.name}}</h1>
+      <h6>{{actor.known_for_department}}</h6>
+      <h6>{{actor.birthday}}</h6>
+      <h6>{{actor.place_of_birth}}</h6>
+    </div>
+  </div>
+  <div *ngFor="let pelicula of peliculas">
+    <div class="contenedorPeliculas">
+      <div class="contendorPelicula" *ngFor="let pelicula of peliculas">
+        <img class="" src="{{url_imagen+pelicula.poster_path}}" alt="">
+        <div class="descripcionPelicula">
+          <h5>{{pelicula.title}}</h5>
+          <p>{{pelicula.vote_average}} ★</p>
+          <a [routerLink]="['/peliculas/',pelicula.id]">
+            Ver más detalles
+          </a>
+          <p>{{pelicula.overview}}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

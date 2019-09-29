@@ -1,0 +1,97 @@
+.titulo{
+    padding-top:7vw;
+    text-align:center;
+}
+.buscador{
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+    padding-top:1vw;
+    input{
+        margin-right:1vw;
+        width:20vw;
+    }
+    button{
+        margin-left:2vw;
+        background-color:black;
+        color:white;
+        border:0;
+    }
+}
+.resultado{
+    display:flex;
+    flex-direction: column;
+    .peliculaDetalle{
+        position: relative;
+        display:flex;
+        flex-direction:row;
+        width:100%;
+        padding:0 20%;
+        margin-top:10vw;
+        color:black;
+        .datosPelicula{
+            display: flex;
+            flex-direction: column;
+            justify-content: start;
+            align-items: flex-start;
+        }
+        div{
+            
+            img{
+                margin-right: 2vw;
+                width:20vw;
+                box-shadow: 2px 2px 2px 2px #000000;
+                border-radius: 1em;
+            }
+        }
+        .similares{
+            margin-top:2vw;
+            a{
+                padding-right:1vw;
+            }
+        }
+        .duracionFecha{
+            display:flex;
+            flex-direction: row;
+            span{
+                margin-right:1vw;
+            }
+        }
+        .idiomas{
+            display:flex;
+            flex-direction: row;
+            margin-top:1vh;
+            span{
+                margin-right:1vw;
+            }
+        }
+        .descripcion{
+            text-align: justify;
+            margin-top:1vw;
+        }
+        .valoraciones{
+            display:flex;
+            flex-direction:row;
+            span{
+                margin-right:1vw;
+            }
+        }
+        .generos{
+            margin-top:1vw;
+            span{
+                margin-right:1vw;
+            }
+        }
+        .companiesProduction{
+            display:flex;
+            flex-direction: row;
+            margin-top:1vw;
+            span{
+                img{
+                    width:5vw;
+                    background-color:white;
+                }
+            }
+        }
+    }
+}

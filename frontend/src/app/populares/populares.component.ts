@@ -15,7 +15,7 @@ export class PopularesComponent implements OnInit {
   public generosFiltrado;
   public queryGeneros='';
   public queryFiltrado='';
-  public url_imagen = 'https://image.tmdb.org/t/p/w200/'
+  public url_imagen = 'https://image.tmdb.org/t/p/w200/';
   constructor(public peliculasservice: PeliculasService) { }
 
   ngOnInit() {

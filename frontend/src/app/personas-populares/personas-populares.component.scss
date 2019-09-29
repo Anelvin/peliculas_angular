@@ -1,0 +1,79 @@
+h1 {
+  padding-top: 8vw;
+  text-align: center;
+}
+
+.contenedor {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding-top: 2vw;
+
+  .datosPersonales {
+    display: flex;
+    flex-direction: row;
+    width: 40vw;
+    margin: 1vw;
+    overflow: auto;
+    box-shadow: 2px 2px 2px 2px #000000;
+    border-radius: 1em;
+    padding: 1vw;
+    height: 47vh;
+
+    div {
+      margin: 0 1vw;
+      width: 50%;
+
+      img {
+        border-radius: 1em;
+        box-shadow: 2px 2px 2px 2px #000000;
+      }
+    }
+
+    .peliculasRelacionadas {
+      flex-wrap: wrap;
+      overflow: auto;
+
+      a {
+        color: black;
+      }
+
+      .imgParticipacionPelis {
+        display: flex;
+        flex-direction: row;
+        margin-top: 1vw;
+
+        img {
+          width: 5vw;
+          margin-right: 1vw;
+
+          border-radius: 1em;
+        }
+      }
+    }
+
+    .peliculasRelacionadas::-webkit-scrollbar {
+      width: 1em;
+    }
+
+    .peliculasRelacionadas::-webkit-scrollbar-track {
+      -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+      border-radius: 1em;
+    }
+
+    .peliculasRelacionadas::-webkit-scrollbar-thumb {
+      background-color: #82d1ff;
+      outline: 1px solid slategrey;
+      border-radius: 1em;
+    }
+  }
+}
+
+.botonesPaginacion {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  background-color: white;
+  padding: 2vw 0;
+}

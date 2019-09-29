@@ -9,7 +9,10 @@ import {HomeComponent} from './home/home.component';
 import {CompanyDetalleComponent} from './company-detalle/company-detalle.component';
 import {PeliculasSimilaresComponent} from './peliculas-similares/peliculas-similares.component';
 import {OpinionesPeliculasComponent} from './opiniones-peliculas/opiniones-peliculas.component';
-import {PeliculasMejorCalificadaComponent} from './peliculas-mejor-calificada/peliculas-mejor-calificada.component'
+import {PeliculasMejorCalificadaComponent} from './peliculas-mejor-calificada/peliculas-mejor-calificada.component';
+import {PersonasPopularesComponent} from './personas-populares/personas-populares.component';
+import {ActorSusPeliculasComponent} from './actor-sus-peliculas/actor-sus-peliculas.component';
+import {BusquedaComponent} from './busqueda/busqueda.component'
 
 const routes: Routes = [
 {
@@ -27,6 +30,10 @@ const routes: Routes = [
 {
   path:'peliculas/populares',
   component:PopularesComponent,
+},
+{
+  path:'personas/populares',
+  component:PersonasPopularesComponent
 },
 {
   path:'peliculas/mejorcalificadas',
@@ -51,6 +58,18 @@ const routes: Routes = [
 {
   path:'peliculas/:id/:actor',
   component: ActorDetalleComponent
+},
+{
+  path:'peliculas/actor/:id',
+  component: ActorDetalleComponent
+},
+{
+  path:'peliculas/actor/:id/suspeliculas',
+  component:ActorSusPeliculasComponent
+},
+{
+  path:'busqueda',
+  component:BusquedaComponent
 }
 
   

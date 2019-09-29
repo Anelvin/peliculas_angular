@@ -1,0 +1,74 @@
+<div>
+  <h1 class="titulo">Busqueda</h1>
+  <div class="container">
+    <div class="jumbotron">
+      <input type="radio" name="buscar" value="pelicula" [(ngModel)]="tipoBusqueda" (change)="verValor()">Película
+      <input type="radio" name="buscar" value="serie" [(ngModel)]="tipoBusqueda" (change)="verValor()">Serie
+      <input type="radio" name="buscar" value="persona" [(ngModel)]="tipoBusqueda" (change)="verValor()">Persona
+      <div class="row">
+        <div class="form-group col-md-8">
+          <input type="text" name="busqueda" class="form-control form-control-lg" placeholder="Buscar película"
+            *ngIf="tipoBusqueda=='pelicula'" [(ngModel)]="query">
+          <input type="text" name="busqueda" class="form-control form-control-lg" placeholder="Buscar serie"
+            *ngIf="tipoBusqueda=='serie'" [(ngModel)]="query">
+          <input type="text" name="busqueda" class="form-control form-control-lg" placeholder="Buscar persona"
+            *ngIf="tipoBusqueda=='persona'" [(ngModel)]="query">
+        </div>
+        <div class="form-group col-md-4">
+          <button class="btn btn-lg btn-dark btn-block" (click)="buscarQuery()">Buscar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="resultado">
+    <div class="peliculaDetalle" *ngFor="let pelicula of resultadoBusqueda">
+      <div>
+        <img src={{url_imagen+pelicula.poster_path}} alt={{pelicula.title}}>
+      </div>
+      <div class="datosPelicula">
+        <div class="tituloPelicula">
+          <h2>{{pelicula.title}}</h2>
+        </div>
+
+        <div class="idiomas">
+          <span *ngFor="let idioma of idiomas">
+            {{idioma.name}}
+          </span>
+        </div>
+        <div class="descripcion">
+          <p>{{pelicula.overview}}</p>
+        </div>
+        <div>
+          <a [routerLink]="['/peliculas/',pelicula.id]">
+            Ver más detalles
+          </a>
+        </div>
+        <div class="duracionFecha">
+          <span>{{pelicula.release_date}}</span>
+        </div>
+        <div class="valoraciones">
+          <span>{{pelicula.vote_average}}⭐</span>
+          <span>{{pelicula.vote_count}}👍🏻</span>
+        </div>
+        <div class="generos">
+          <span *ngFor="let genero of generos">{{genero.name}}</span>
+        </div>
+        <div class="companiesProduction">
+          <span *ngFor="let company of compa_product ">
+            <a [routerLink]="['/peliculas/company',company.id]">
+              <img src={{url_imagen+company.logo_path}} alt="">
+            </a>
+          </span>
+        </div>
+        <div class="similares">
+          <a [routerLink]="['/peliculas/similares',pelicula.id]">
+            Peliculas similares
+          </a>
+          <a [routerLink]="['/peliculas/opiniones',pelicula.id]">
+            Opinones
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,21 +1,29 @@
 <header>
-    <div class="redireccionHome">
-        <a href="/">
-            <img src="../../assets/img/video.png" alt="">
-            <h1>PelículasApp</h1>
-        </a>
-    </div>
-    <div class="tiposPeliculas">
-        <span>Quiero ver:</span>
-        <select name="seleccionTema" [(ngModel)]="tema" (change)="cambiarTema()">
-            <option value="peliculas">Peliculas</option>
-            <option value="series">Series</option>
-            <option value="personas">Personas</option>
-        </select>
-        <select name="seleccionTipoPelicula" [(ngModel)]="tipoPeliculas" (change)="cambiarTipoPelicula()">
-            <option value="encines">En cines</option>
-            <option value="populares">Populares</option>
-            <option value="mejorcalificadas">Mejor Calificadas</option>
-        </select>
-    </div>
+  <div class="redireccionHome">
+    <a href="/">
+      <img src="../../assets/img/video.png" alt="">
+      <h1>PelículasApp</h1>
+    </a>
+  </div>
+  <div class="busqueda">
+    <a [routerLink]="['/busqueda']">Buscar</a>
+  </div>
+  <div class="tiposPeliculas">
+    <span>Quiero ver:</span>
+    <select name="seleccionTema" [(ngModel)]="tema" (change)="cambiarTema()">
+      <option value="peliculas">Peliculas</option>
+      <option value="series">Series</option>
+      <option value="personas">Personas</option>
+    </select>
+    <select name="seleccionTipoPelicula" [(ngModel)]="tipoPeliculas" (change)="cambiarTipoPelicula()"
+      *ngIf="tema=='peliculas'">
+      <option value="encines">En cines</option>
+      <option value="populares">Populares</option>
+      <option value="mejorcalificadas">Mejor Calificadas</option>
+    </select>
+    <select name="seleccionTipoPersona" [(ngModel)]="tipoPersonas" (change)="cambiarTipoPelicula()"
+      *ngIf="tema=='personas'">
+      <option value="populares">Populares</option>
+    </select>
+  </div>
 </header>

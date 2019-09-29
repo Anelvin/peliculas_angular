@@ -16,6 +16,10 @@ import { CompanyDetalleComponent } from './company-detalle/company-detalle.compo
 import { PeliculasSimilaresComponent } from './peliculas-similares/peliculas-similares.component';
 import { OpinionesPeliculasComponent } from './opiniones-peliculas/opiniones-peliculas.component';
 import { PeliculasMejorCalificadaComponent } from './peliculas-mejor-calificada/peliculas-mejor-calificada.component';
+import { PersonasPopularesComponent } from './personas-populares/personas-populares.component';
+import { ActorSusPeliculasComponent } from './actor-sus-peliculas/actor-sus-peliculas.component';
+import { BusquedaComponent } from './busqueda/busqueda.component';
+
 
 @NgModule({
   declarations: [
@@ -31,7 +35,10 @@ import { PeliculasMejorCalificadaComponent } from './peliculas-mejor-calificada/
     CompanyDetalleComponent,
     PeliculasSimilaresComponent,
     OpinionesPeliculasComponent,
-    PeliculasMejorCalificadaComponent
+    PeliculasMejorCalificadaComponent,
+    PersonasPopularesComponent,
+    ActorSusPeliculasComponent,
+    BusquedaComponent
   ],
   imports: [
     BrowserModule,

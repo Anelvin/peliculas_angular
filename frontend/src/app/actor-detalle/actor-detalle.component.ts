@@ -10,7 +10,7 @@ import {ActoresService} from '../services/actores.service'
 export class ActorDetalleComponent implements OnInit {
   public id='';
   public loading=false;
-  public url_imagen='https://image.tmdb.org/t/p/w200/'
+  public url_imagen='https://image.tmdb.org/t/p/w200/';
   public actor:object;
   constructor(public _router:ActivatedRoute,public actorservice:ActoresService) { }
 

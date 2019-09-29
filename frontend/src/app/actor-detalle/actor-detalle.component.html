@@ -18,6 +18,7 @@
           <span>{{actor.popularity}}👍🏻</span>
           <span>{{actor.birthday}}</span>
           <span>{{actor.place_of_birth}}</span>
+          <a [routerLink]="['/peliculas/actor/'+actor.id+'/suspeliculas']">Sus películas</a>
       </div>
       <p>
         {{actor.biography}}

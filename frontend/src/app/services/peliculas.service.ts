@@ -68,4 +68,7 @@ export class PeliculasService {
       return this.http.get(`https://api.themoviedb.org/3/movie/top_rated?api_key=7a5ab1a16890bdb75e5ffef8bd2ce921&language=en-US&page=${page}`)
     }
   }
+  buscarPelicula(query){
+    return this.http.get(`https://api.themoviedb.org/3/search/movie?api_key=7a5ab1a16890bdb75e5ffef8bd2ce921&language=en-US&query=${query}&page=1&include_adult=false`)
+   }
 }

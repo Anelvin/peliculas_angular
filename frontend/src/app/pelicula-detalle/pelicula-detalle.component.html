@@ -51,7 +51,7 @@
     </div>
   </div>
   <div class="actores">
-    <a *ngFor="let actor of actores"  [routerLink]="['/peliculas',pelicula.id,actor.id]">
+    <a *ngFor="let actor of actores"  [routerLink]="['/peliculas/actor',actor.id]">
       {{actor.name}} --
     </a>
   </div>
