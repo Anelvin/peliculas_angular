@@ -31,8 +31,8 @@
         <span>{{pelicula.vote_count}}👍🏻</span>
       </div>
       <div class="generos">
-        <span *ngFor="let genero of generos">{{genero.name}}</span>
-      </div>
+          <span *ngFor="let genero of generos">{{genero.name}}</span>
+        </div>
       <div class="companiesProduction">
         <span *ngFor="let company of compa_product ">
           <a [routerLink]="['/peliculas/company',company.id]">
@@ -51,7 +51,7 @@
     </div>
   </div>
   <div class="actores">
-    <a *ngFor="let actor of actores"  [routerLink]="['/peliculas/actor',actor.id]">
+    <a *ngFor="let actor of actores" [routerLink]="['/peliculas/actor',actor.id]">
       {{actor.name}} --
     </a>
   </div>

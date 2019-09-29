@@ -25,5 +25,9 @@
       *ngIf="tema=='personas'">
       <option value="populares">Populares</option>
     </select>
+    <select name="seleccionTipoSerie" [(ngModel)]="tipoSeries" (change)="cambiarTipoPelicula()" *ngIf="tema=='series'">
+      <option value="populares">Populares</option>
+      <option value="mejorcalificadas">Mejor Calificadas</option>
+    </select>
   </div>
 </header>

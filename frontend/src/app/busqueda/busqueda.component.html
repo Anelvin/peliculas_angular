@@ -20,7 +20,7 @@
       </div>
     </div>
   </div>
-  <div class="resultado">
+  <div class="resultado" *ngIf="tipoBusqueda=='pelicula'">
     <div class="peliculaDetalle" *ngFor="let pelicula of resultadoBusqueda">
       <div>
         <img src={{url_imagen+pelicula.poster_path}} alt={{pelicula.title}}>
@@ -67,6 +67,36 @@
           <a [routerLink]="['/peliculas/opiniones',pelicula.id]">
             Opinones
           </a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="resultado" *ngIf="tipoBusqueda=='persona'">
+    <div class="peliculaDetalle" *ngFor="let actor of resultadoPersona">
+      <div>
+        <a [routerLink]="['/peliculas/actor/',actor.id]">
+          <img src={{url_imagen+actor.profile_path}} alt={{actor.name}}>
+        </a>
+      </div>
+      <div class="datosPelicula">
+        <div class="tituloPelicula">
+          <a [routerLink]="['/peliculas/actor/',actor.id]">
+            <h2>{{actor.name}}</h2>
+          </a>
+        </div>
+        <div>
+          <h6>{{actor.known_for_department}}</h6>
+        </div>
+        <div>
+          <h6>{{actor.popularity}}👍🏻</h6>
+        </div>
+        <div class="peliculasActores">
+          <div *ngFor="let pelicula of actor.known_for">
+              <a [routerLink]="['/peliculas/',pelicula.id]">
+                  <img src={{url_imagen+pelicula.poster_path}} alt="">
+              </a>
+            <span>{{pelicula.title}}</span>
+          </div>
         </div>
       </div>
     </div>

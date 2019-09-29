@@ -1,0 +1,40 @@
+<div>
+  <div class="contenedor">
+    <div class="contenedorSerie">
+      <div>
+        <img src={{url_imagen+serie.poster_path}} alt={{serie.name}}>
+      </div>
+      <div>
+        <div class="datosSerie">
+          <h2>{{serie.name}}</h2>
+          <div>
+            <span>{{serie.first_air_date}}</span>
+            <span>{{serie.last_air_date}}</span>
+            <span>{{serie.popularity}}👍🏻</span>
+            <span>{{serie.vote_average}}⭐</span>
+          </div>
+          <div>
+            <p>
+              {{serie.overview}}
+            </p>
+          </div>
+          <div>
+            <span>Temporada(s): {{serie.number_of_seasons}}</span>
+            <span>Episodios: {{serie.number_of_episodes}}</span>
+          </div>
+          <div>
+            <a [routerLink]="['/series/temporadas/',serie.id]">Temporadas
+            </a>
+          </div>
+          <div class="companiesProduction">
+            <span *ngFor="let company of serie.production_companies">
+              <a [routerLink]="['/peliculas/company', company.id]">
+                <img src={{url_imagen+company.logo_path}} alt={{company.name}}>
+              </a>
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,30 @@
+.titulo{
+    padding-top:7vw;
+    text-align: center;
+}
+.contenedor{
+    padding-top:3vw;
+    .temporada{
+        padding:0 15%;
+        margin:2vw 0;
+        div{
+            display:flex;
+            flex-direction:row;
+            .datosTemporada{
+                display:flex;
+                flex-direction: column;
+            }
+            p{
+                text-align: justify;
+            }
+        }
+        .imagenTemporada{
+            margin:1vw;
+            img{
+                border-radius: 1em;
+                box-shadow: 2px 2px 2px 2px #000000;
+            }
+            
+        }
+    }
+}

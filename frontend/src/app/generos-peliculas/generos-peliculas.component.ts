@@ -1,5 +1,5 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
-import {PeliculasService} from '../services/peliculas.service'
+import {PeliculasService} from '../services/peliculas.service';
 
 @Component({
   selector: 'app-generos-peliculas',

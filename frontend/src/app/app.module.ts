@@ -19,6 +19,10 @@ import { PeliculasMejorCalificadaComponent } from './peliculas-mejor-calificada/
 import { PersonasPopularesComponent } from './personas-populares/personas-populares.component';
 import { ActorSusPeliculasComponent } from './actor-sus-peliculas/actor-sus-peliculas.component';
 import { BusquedaComponent } from './busqueda/busqueda.component';
+import { SeriesPopularesComponent } from './series-populares/series-populares.component';
+import { GenerosSeriesComponent } from './generos-series/generos-series.component';
+import { SerieDetalleComponent } from './serie-detalle/serie-detalle.component';
+import { SerieTemporadasComponent } from './serie-temporadas/serie-temporadas.component';
 
 
 @NgModule({
@@ -38,7 +42,11 @@ import { BusquedaComponent } from './busqueda/busqueda.component';
     PeliculasMejorCalificadaComponent,
     PersonasPopularesComponent,
     ActorSusPeliculasComponent,
-    BusquedaComponent
+    BusquedaComponent,
+    SeriesPopularesComponent,
+    GenerosSeriesComponent,
+    SerieDetalleComponent,
+    SerieTemporadasComponent
   ],
   imports: [
     BrowserModule,

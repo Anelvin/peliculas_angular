@@ -1,0 +1,22 @@
+<div>
+  <div>
+    <h1 class="titulo">Temporadas de {{titulo}}</h1>
+    <div class="contenedor">
+      <div class="temporada" *ngFor="let temporada of temporadas">
+        <div>
+          <div class="imagenTemporada">
+            <img src={{url_imagen+temporada.poster_path}} alt="">
+          </div>
+          <div class="datosTemporada">
+            <h2>{{temporada.name}}</h2>
+            <h6>Fecha: {{temporada.air_date}}</h6>
+            <h6>Episodios: {{temporada.episode_count}}</h6>
+            <p>
+                {{temporada.overview}}
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -12,7 +12,10 @@ import {OpinionesPeliculasComponent} from './opiniones-peliculas/opiniones-pelic
 import {PeliculasMejorCalificadaComponent} from './peliculas-mejor-calificada/peliculas-mejor-calificada.component';
 import {PersonasPopularesComponent} from './personas-populares/personas-populares.component';
 import {ActorSusPeliculasComponent} from './actor-sus-peliculas/actor-sus-peliculas.component';
-import {BusquedaComponent} from './busqueda/busqueda.component'
+import {BusquedaComponent} from './busqueda/busqueda.component';
+import {SeriesPopularesComponent} from './series-populares/series-populares.component';
+import {SerieDetalleComponent} from './serie-detalle/serie-detalle.component';
+import {SerieTemporadasComponent} from './serie-temporadas/serie-temporadas.component';
 
 const routes: Routes = [
 {
@@ -68,9 +71,21 @@ const routes: Routes = [
   component:ActorSusPeliculasComponent
 },
 {
+  path:'series/populares',
+  component:SeriesPopularesComponent
+},
+{
+  path:'series/:id',
+  component:SerieDetalleComponent
+},
+{
+  path:'series/temporadas/:id',
+  component:SerieTemporadasComponent
+},
+{
   path:'busqueda',
   component:BusquedaComponent
-}
+},
 
   
 ];

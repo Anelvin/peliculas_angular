@@ -12,6 +12,7 @@ export class HeaderComponent implements OnInit {
   tema='Seleccione...';
   tipoPeliculas='Seleccione...';
   tipoPersonas='Seleccione...';
+  tipoSeries='Seleccione...';
 
   ngOnInit() {
   }
@@ -24,6 +25,10 @@ export class HeaderComponent implements OnInit {
     if(this.tema==='personas'){
       this._router.navigate(['/personas/populares']);
       this.tipoPersonas='populares'
+    }
+    if(this.tema==='series'){
+      this._router.navigate(['/series/populares']);
+      this.tipoSeries='populares'
     }
   }
 
@@ -42,6 +47,14 @@ export class HeaderComponent implements OnInit {
     }
     if(this.tema==='personas'){
       
+    }
+    if(this.tema==='series'){
+      console.log(this.tema);
+      switch(this.tipoSeries){
+        case 'populares':this._router.navigate(['/series/populares']);
+                        break;
+        default:this._router.navigate(['/series/populares']);
+      }
     }
   }
 

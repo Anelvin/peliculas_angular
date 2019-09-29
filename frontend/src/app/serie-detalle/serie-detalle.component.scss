@@ -1,0 +1,28 @@
+.contenedor {
+  padding-top: 10vw;
+
+  .contenedorSerie {
+    display: flex;
+    flex-direction: row;
+    padding: 0 15%;
+    div{
+        padding:1vw;
+        img{
+            width:20vw;
+            border-radius:1em;
+            box-shadow:2px 2px 2px 2px #000000;
+        }
+    }
+    .datosSerie{
+        span{
+            padding-right:1vw;
+        }
+        .companiesProduction{
+            img{
+                width:5vw;
+            }
+        }
+    }
+  }
+
+}

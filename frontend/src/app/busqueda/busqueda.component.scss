@@ -29,6 +29,24 @@
         padding:0 20%;
         margin-top:10vw;
         color:black;
+        height: 70vh;
+        overflow: auto;
+        div{
+            a{
+                color:black;
+            }
+        }
+        .peliculasActores{
+            display:flex;
+            flex-direction: row;
+    
+            div{
+                margin:1vw;
+            }
+            img{
+                width:5vw;
+            }
+        }
         .datosPelicula{
             display: flex;
             flex-direction: column;
@@ -36,6 +54,8 @@
             align-items: flex-start;
         }
         div{
+            display:flex;
+            flex-direction: column;
             
             img{
                 margin-right: 2vw;
