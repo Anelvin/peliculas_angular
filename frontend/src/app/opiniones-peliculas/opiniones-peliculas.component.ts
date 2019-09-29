@@ -24,4 +24,6 @@ export class OpinionesPeliculasComponent implements OnInit {
     this.loading=true;
   }
 
+  
+
 }

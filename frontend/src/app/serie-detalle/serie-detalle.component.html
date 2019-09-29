@@ -14,6 +14,9 @@
             <span>{{serie.vote_average}}⭐</span>
           </div>
           <div>
+            <a href="https://www.youtube.com/watch?v={{video[0].key}}" target="_blank">Ver tráiler</a>
+          </div>
+          <div>
             <p>
               {{serie.overview}}
             </p>
@@ -23,6 +26,9 @@
             <span>Episodios: {{serie.number_of_episodes}}</span>
           </div>
           <div>
+            <a [routerLink]="['/series/opiniones/',serie.id]">
+              Opinones
+            </a>
             <a [routerLink]="['/series/temporadas/',serie.id]">Temporadas
             </a>
           </div>
@@ -36,5 +42,10 @@
         </div>
       </div>
     </div>
+        <div class="elenco">
+            <a *ngFor="let actor of actores" [routerLink]="['/peliculas/actor',actor.id]">
+              {{actor.name}} --
+            </a>
+        </div>
   </div>
 </div>

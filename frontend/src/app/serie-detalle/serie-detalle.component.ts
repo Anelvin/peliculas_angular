@@ -10,6 +10,8 @@ import {ActivatedRoute} from '@angular/router';
 export class SerieDetalleComponent implements OnInit {
   public serie:object;
   public id=null;
+  public video:object;
+  public actores:object;
   public url_imagen = 'https://image.tmdb.org/t/p/w200/';
   constructor(public seriesservice:SeriesService,public _router:ActivatedRoute) { }
 
@@ -19,7 +21,14 @@ export class SerieDetalleComponent implements OnInit {
     .subscribe(resultado=>{
       this.serie=resultado;
     })
-    
+    this.seriesservice.buscarVideo(this.id)
+    .subscribe(resultado=>{
+      this.video=resultado['results'];
+    })
+    this.seriesservice.buscarActores(this.id)
+    .subscribe(resultado=>{
+      this.actores=resultado['cast']
+    })
   }
 
 }

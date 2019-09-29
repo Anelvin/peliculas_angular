@@ -1,20 +1,20 @@
-
 <div *ngIf="loading==false">
-        <app-loading >
-        </app-loading>
-      </div>
-      
+  <app-loading>
+  </app-loading>
+</div>
+
 
 <div class="contenedor" *ngIf="loading==true">
-    <h2>Opiniones</h2>
-    <div class="opinion">
-        <div  *ngFor="let opinion of opiniones" >
-            <h3>
-                {{opinion.author}}
-            </h3>
-            <p>
-                {{opinion.content}}
-            </p>
-        </div>
+  <h2>Opiniones</h2>
+  <div class="opinion">
+    <div *ngFor="let opinion of opiniones" >
+      <h3>
+        {{opinion.author}}
+      </h3>
+      <p>
+        {{opinion.content}}
+      </p>
     </div>
+
+  </div>
 </div>

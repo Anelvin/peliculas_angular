@@ -16,6 +16,8 @@ import {BusquedaComponent} from './busqueda/busqueda.component';
 import {SeriesPopularesComponent} from './series-populares/series-populares.component';
 import {SerieDetalleComponent} from './serie-detalle/serie-detalle.component';
 import {SerieTemporadasComponent} from './serie-temporadas/serie-temporadas.component';
+import {OpinionesSeriesComponent} from './opiniones-series/opiniones-series.component';
+import {SeriesMejorCalificadasComponent} from './series-mejor-calificadas/series-mejor-calificadas.component';
 
 const routes: Routes = [
 {
@@ -75,8 +77,16 @@ const routes: Routes = [
   component:SeriesPopularesComponent
 },
 {
+  path:'series/mejorcalificadas',
+  component:SeriesMejorCalificadasComponent
+},
+{
   path:'series/:id',
   component:SerieDetalleComponent
+},
+{
+  path:'series/opiniones/:id',
+  component:OpinionesSeriesComponent
 },
 {
   path:'series/temporadas/:id',

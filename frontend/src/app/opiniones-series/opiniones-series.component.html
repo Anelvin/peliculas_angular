@@ -1,0 +1,26 @@
+<div *ngIf="loading==false">
+  <app-loading>
+  </app-loading>
+</div>
+
+
+<div class="contenedor" *ngIf="loading==true">
+  <h2 (click)="ver()">Opiniones</h2>
+  <div class="opinion" *ngIf="comentarios>0">
+    <div *ngFor="let opinion of opiniones">
+      <h3>
+        {{opinion.author}}
+      </h3>
+      <p>
+        {{opinion.content}}
+      </p>
+    </div>
+  </div>
+  <div class="opinion" *ngIf="comentarios==0">
+    <div>
+      <h3>
+        No hay comentarios
+      </h3>
+    </div>
+  </div>
+</div>

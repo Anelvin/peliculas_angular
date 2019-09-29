@@ -1,0 +1,27 @@
+<div *ngIf="loading==false">
+        <app-loading>
+        </app-loading>
+      </div>
+      <div *ngIf="loading==true">
+        <h1>Series Mejor Calificadas</h1>
+        <app-generos-series (obtenerGeneros)="filtroGeneros($event)"></app-generos-series>
+        <div class="contenedorPeliculas">
+          <div class="contendorPelicula" *ngFor="let serie of series">
+            <img class="" src="{{url_imagen+serie.poster_path}}" alt="">
+            <div class="descripcionPelicula">
+              <h5>{{serie.name}}</h5>
+              <p>{{serie.vote_average}} ★</p>
+              <a [routerLink]="['/series/',serie.id]">
+                Ver Más detalles
+              </a>
+              <p>{{serie.overview}}</p>
+            </div>
+          </div>
+        </div>
+      
+        <div class="botonesPaginacion">
+          <button class="btn btn-info mr-1" (click)="paginaAnterior()">Anterior</button>
+          <button class="btn btn-info mr-1" (click)="paginaSiguiente()">Siguiente</button>
+        </div>
+      </div>
+      

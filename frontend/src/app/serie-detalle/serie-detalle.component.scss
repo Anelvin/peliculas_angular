@@ -1,6 +1,11 @@
 .contenedor {
   padding-top: 10vw;
-
+    .elenco{
+        a{
+            color:black;
+        }
+        padding: 0 15%
+    }
   .contenedorSerie {
     display: flex;
     flex-direction: row;

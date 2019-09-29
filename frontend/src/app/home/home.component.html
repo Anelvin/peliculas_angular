@@ -28,7 +28,7 @@
       <ul>
         <li>
           <span *ngFor="let tendencia of tendenciasTv" class="contenedorImagen">
-            <a [routerLink]="['/peliculas/:id',tendencia.id]">
+            <a [routerLink]="['/series/',tendencia.id]">
               <img src={{url_imagen+tendencia.poster_path}} alt="">
               <span class="title">{{tendencia.name}}</span>
             </a>

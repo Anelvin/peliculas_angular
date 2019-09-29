@@ -53,6 +53,8 @@ export class HeaderComponent implements OnInit {
       switch(this.tipoSeries){
         case 'populares':this._router.navigate(['/series/populares']);
                         break;
+        case 'mejorcalificadas':this._router.navigate(['/series/mejorcalificadas']);
+                        break;
         default:this._router.navigate(['/series/populares']);
       }
     }

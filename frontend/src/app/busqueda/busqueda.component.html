@@ -2,9 +2,9 @@
   <h1 class="titulo">Busqueda</h1>
   <div class="container">
     <div class="jumbotron">
-      <input type="radio" name="buscar" value="pelicula" [(ngModel)]="tipoBusqueda" (change)="verValor()">Película
-      <input type="radio" name="buscar" value="serie" [(ngModel)]="tipoBusqueda" (change)="verValor()">Serie
-      <input type="radio" name="buscar" value="persona" [(ngModel)]="tipoBusqueda" (change)="verValor()">Persona
+      <input type="radio" name="buscar" value="pelicula" [(ngModel)]="tipoBusqueda" (change)="ver()">Película
+      <input type="radio" name="buscar" value="serie" [(ngModel)]="tipoBusqueda" (change)="ver()">Serie
+      <input type="radio" name="buscar" value="persona" [(ngModel)]="tipoBusqueda" (change)="ver()">Persona
       <div class="row">
         <div class="form-group col-md-8">
           <input type="text" name="busqueda" class="form-control form-control-lg" placeholder="Buscar película"
@@ -92,10 +92,43 @@
         </div>
         <div class="peliculasActores">
           <div *ngFor="let pelicula of actor.known_for">
-              <a [routerLink]="['/peliculas/',pelicula.id]">
-                  <img src={{url_imagen+pelicula.poster_path}} alt="">
-              </a>
+            <a [routerLink]="['/peliculas/',pelicula.id]">
+              <img src={{url_imagen+pelicula.poster_path}} alt="">
+            </a>
             <span>{{pelicula.title}}</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="resultado" *ngIf="tipoBusqueda=='serie'">
+    <div class="peliculaDetalle" *ngFor="let serie of resultadoSerie">
+      <div>
+        <a [routerLink]="['/series/',serie.id]">
+          <img src={{url_imagen+serie.poster_path}} alt={{serie.name}}>
+        </a>
+      </div>
+      <div class="datosPelicula">
+        <div class="tituloPelicula">
+          <a [routerLink]="['/series/',serie.id]">
+            <h2>{{serie.name}}</h2>
+          </a>
+        </div>
+        <div>
+          <h6>{{serie.first_air_date}}</h6>
+        </div>
+        <div>
+          <h6>{{serie.popularity}}👍🏻</h6>
+        </div>
+        <div>
+          {{serie.vote_average}}⭐
+        </div>
+        <div>
+          {{serie.overview}}
+        </div>
+        <div class="peliculasActores">
+          <div >
+          
           </div>
         </div>
       </div>

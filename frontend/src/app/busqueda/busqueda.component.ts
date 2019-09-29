@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import {Router} from '@angular/router';
 import {BusquedaService} from '../services/busqueda.service';
 import { PeliculasService } from '../services/peliculas.service';
-import {ActoresService} from '../services/actores.service'
+import {ActoresService} from '../services/actores.service';
+import {SeriesService} from '../services/series.service';
 
 @Component({
   selector: 'app-busqueda',
@@ -14,9 +14,10 @@ export class BusquedaComponent implements OnInit {
   public query=null;
   public resultadoBusqueda:object;
   public resultadoPersona:object;
+  public resultadoSerie:object;
   public peliculasActores:object;
   public url_imagen = 'https://image.tmdb.org/t/p/w200/';
-  constructor(public busquedaservice:BusquedaService,public peliculaservice:PeliculasService,public actorservice:ActoresService) { }
+  constructor(public busquedaservice:BusquedaService,public peliculaservice:PeliculasService,public actorservice:ActoresService,public seriesservice:SeriesService) { }
 
   ngOnInit() {
   }
@@ -34,7 +35,17 @@ export class BusquedaComponent implements OnInit {
       this.resultadoPersona=resultado['results']
     })
    }
+   if (this.tipoBusqueda==='serie'){
+    this.seriesservice.seriePorQuery(this.query)
+    .subscribe(resultado=>{
+      this.resultadoSerie=resultado['results']
+    })
+   }
    
+  }
+
+  ver(){
+    console.log(this.tipoBusqueda);
   }
 
 
