@@ -30,3 +30,85 @@
         }
     }
 }
+
+@media (max-width:1400px) {
+    .componenteGeneros {
+      .contenedorGeneros {
+        width: 60%;
+        height: 30vh;
+        .contenedorInputs {
+          input {
+            font-size: 1vw;
+          }
+          span {
+            font-size: 1vw;
+          }
+        }
+      }
+    }
+  }
+@media (max-width:1180px) {
+    .componenteGeneros {
+      .contenedorGeneros {
+        width: 60%;
+        .contenedorInputs {
+          input {
+            font-size: 1.5vw;
+          }
+          span {
+            font-size: 1.5vw;
+          }
+        }
+      }
+    }
+  }
+
+@media (max-width:950px) {
+    .componenteGeneros {
+      .contenedorGeneros {
+        width: 60%;
+        .contenedorInputs {
+          input {
+            font-size: 1.5vw;
+          }
+          span {
+            font-size: 1.5vw;
+          }
+        }
+      }
+    }
+  }
+
+@media (max-width:750px) {
+  .componenteGeneros {
+    .contenedorGeneros {
+      width: 60%;
+      .contenedorInputs {
+        input {
+          font-size: 2vw;
+        }
+        span {
+          font-size: 2vw;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width:550px) {
+  .componenteGeneros {
+    .contenedorGeneros {
+      width: 60%;
+
+      .contenedorInputs {
+        input {
+          font-size: 2vw;
+        }
+
+        span {
+          font-size: 2.5vw;
+        }
+      }
+    }
+  }
+}

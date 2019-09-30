@@ -1,23 +1,56 @@
-.contenedor{
-    position: relative;
-    display:flex;
+.contenedor {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  padding-top: 10vw;
+  align-items: center;
+
+  .opinion {
+    display: flex;
     flex-direction: column;
-    padding-top:10vw;
-    align-items:center;
-    
-    .opinion{
-        display:flex;
-        flex-direction:column;
-        margin-bottom:2vw;
-        width:70vw;
-        div{
-            margin-top:2vw;
-            p{
-                text-align: justify;
-            }
-            h3{
-                text-decoration: underline;
-            }
-        }
+    margin-bottom: 2vw;
+    width: 70vw;
+
+    div {
+      margin-top: 2vw;
+
+      p {
+        text-align: justify;
+      }
+
+      h3 {
+        text-decoration: underline;
+      }
     }
+  }
+}
+
+@media (max-width:750px) {
+  .contenedor {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    padding-top: 10vw;
+    align-items: center;
+    h2{
+        font-size:5vw;
+    }
+    .opinion {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 2vw;
+      width: 70vw;
+      div {
+        margin-top: 2vw;
+        p {
+          text-align: justify;
+          font-size:2vw;
+        }
+        h3 {
+            font-size:4vw;
+            text-decoration: underline;
+        }
+      }
+    }
+  }
 }

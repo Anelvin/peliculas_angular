@@ -1,30 +1,87 @@
-.titulo{
-    padding-top:7vw;
-    text-align: center;
+.titulo {
+  padding-top: 7vw;
+  text-align: center;
 }
-.contenedor{
-    padding-top:3vw;
-    .temporada{
-        padding:0 15%;
-        margin:2vw 0;
-        div{
-            display:flex;
-            flex-direction:row;
-            .datosTemporada{
-                display:flex;
-                flex-direction: column;
-            }
-            p{
-                text-align: justify;
-            }
-        }
-        .imagenTemporada{
-            margin:1vw;
-            img{
-                border-radius: 1em;
-                box-shadow: 2px 2px 2px 2px #000000;
-            }
-            
-        }
+
+.contenedor {
+  padding-top: 3vw;
+
+  .temporada {
+    padding: 0 15%;
+    margin: 2vw 0;
+
+    div {
+      display: flex;
+      flex-direction: column;
+
+      .datosTemporada {
+        display: flex;
+        flex-direction: column;
+      }
+
+      p {
+        text-align: justify;
+      }
     }
+
+    .imagenTemporada {
+      margin: 1vw;
+      width:30vw;
+      height:40vh;
+      img {
+        border-radius: 1em;
+        box-shadow: 2px 2px 2px 2px #000000;
+      }
+
+    }
+  }
+}
+
+
+@media (max-width:1200px) {
+  .titulo {
+    padding-top: 10vw;
+    text-align: center;
+    font-size:5vw;
+  }
+
+  .contenedor {
+    padding-top: 3vw;
+
+    .temporada {
+      padding: 0 15%;
+      margin: 2vw 0;
+
+      div {
+        display: flex;
+        flex-direction: column;
+
+        .datosTemporada {
+          display: flex;
+          flex-direction: column;
+        }
+        h2{
+            font-size:5vw;
+        }
+        h6{
+            font-size:3.5vw;
+        }
+        p {
+          text-align: justify;
+          font-size:3vw;
+        }
+      }
+
+      .imagenTemporada {
+        margin: 1vw;
+        margin-bottom: 5vw;
+        width:30vw;
+        img {
+          border-radius: 1em;
+          box-shadow: 2px 2px 2px 2px #000000;
+        }
+
+      }
+    }
+  }
 }

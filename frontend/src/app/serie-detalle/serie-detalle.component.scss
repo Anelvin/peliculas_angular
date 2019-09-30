@@ -31,3 +31,56 @@
   }
 
 }
+
+@media (max-width:650px){
+    .contenedor {
+        padding-top: 10vw;
+          .elenco{
+              a{
+                  color:black;
+              }
+              padding: 0 15%
+          }
+        .contenedorSerie {
+          display: flex;
+          flex-direction: column;
+          padding: 0 10%;
+          div{
+              padding:1vw;
+              img{
+                  width:20vw;
+                  border-radius:1em;
+                  box-shadow:2px 2px 2px 2px #000000;
+              }
+          }
+          .datosSerie{
+              div{
+                  p{
+                      font-size:3vw;
+                  }
+              }
+              a{
+                  font-size:3vw;
+              }
+              h2{
+                  font-size:5vw;
+              }
+              span{
+                  font-size:3vw;
+                  padding-right:1vw;
+              }
+              .companiesProduction{
+                  img{
+                      width:8vw;
+                  }
+              }
+          }
+        }
+        .elenco{
+            a{
+                font-size: 3vw;
+            }
+        }
+      
+      }      
+}

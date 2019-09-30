@@ -48,7 +48,6 @@ export class EncineComponent implements OnInit {
   }
 
   filtroGeneros(t){
-    this.loading=false;
     let existe=0;
     this.queryGeneros='&with_genres=';
     for(let x=0;x<this.generos.length;x++){
@@ -64,10 +63,9 @@ export class EncineComponent implements OnInit {
       this.queryGeneros += `${this.generos[x]},`
     }
     this.queryFiltrado=this.queryGeneros.substring(0, this.queryGeneros.length-1);
-    this.peliculasservice.peliculasPopularesGeneros(this.pagina,this.queryFiltrado)
+    this.peliculasservice.buscarPeliculasEnCine(this.pagina,this.queryFiltrado)
     .subscribe(resultado=>{
-      this.peliculas=resultado['results'];
-      this.loading=true
+      this.peliculas=resultado['results']
       }
     )
   }

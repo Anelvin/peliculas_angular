@@ -1,88 +1,223 @@
-.contenedor{
+.contenedor {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  min-height: 100vh;
+
+  .peliculaDetalle {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 60%;
+    margin-top: 10vw;
+    color: black;
+
+    div {
+      img {
+        margin-right: 2vw;
+        width: 20vw;
+        box-shadow: 2px 2px 2px 2px #000000;
+        border-radius: 1em;
+      }
+    }
+
+    .similares {
+      margin-top: 2vw;
+
+      a {
+        padding-right: 1vw;
+      }
+    }
+
+    .duracionFecha {
+      display: flex;
+      flex-direction: row;
+
+      span {
+        margin-right: 1vw;
+      }
+    }
+
+    .idiomas {
+      display: flex;
+      flex-direction: row;
+      margin-top: 1vh;
+
+      span {
+        margin-right: 1vw;
+      }
+    }
+
+    .descripcion {
+      text-align: justify;
+      margin-top: 1vw;
+    }
+
+    .valoraciones {
+      display: flex;
+      flex-direction: row;
+
+      span {
+        margin-right: 1vw;
+      }
+    }
+
+    .generos {
+      margin-top: 1vw;
+
+      span {
+        margin-right: 1vw;
+      }
+    }
+
+    .companiesProduction {
+      display: flex;
+      flex-direction: row;
+      margin-top: 1vw;
+
+      span {
+        img {
+          width: 5vw;
+          background-color: white;
+        }
+      }
+    }
+  }
+}
+
+.actores {
+  display: flex;
+  flex-direction: row;
+  background-color: white;
+  padding: 0 20vw;
+  margin-top: 2vw;
+  flex-wrap: wrap;
+
+  a {
+    color: black;
+  }
+}
+
+
+@media (max-width:600px) {
+  .contenedor {
     position: relative;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items:center;
-    background-color:white;
-    min-height:100vh;
-    .peliculaDetalle{
-        position: relative;
-        display:flex;
-        flex-direction:row;
-        align-items:center;
-        justify-content: center;
-        width:60%;
-        margin-top:10vw;
-        color:black;
-        div{
-            img{
-                margin-right: 2vw;
-                width:20vw;
-                box-shadow: 2px 2px 2px 2px #000000;
-                border-radius: 1em;
-            }
+
+    .peliculaDetalle {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      width: 80%;
+      margin-top: 15vw;
+      color: black;
+
+      div {
+        img {
+          margin-right: 2vw;
+          width: 20vw;
+          box-shadow: 2px 2px 2px 2px #000000;
+          border-radius: 1em;
         }
-        .similares{
-            margin-top:2vw;
-            a{
-                padding-right:1vw;
-            }
+      }
+
+      .titulo {
+        h2 {
+          font-size: 5vw;
         }
-        .duracionFecha{
-            display:flex;
-            flex-direction: row;
-            span{
-                margin-right:1vw;
-            }
+      }
+
+      .duracionFecha {
+        span {
+          font-size: 3.5vw;
         }
-        .idiomas{
-            display:flex;
-            flex-direction: row;
-            margin-top:1vh;
-            span{
-                margin-right:1vw;
-            }
-        }
-        .descripcion{
-            text-align: justify;
-            margin-top:1vw;
-        }
-        .valoraciones{
-            display:flex;
-            flex-direction:row;
-            span{
-                margin-right:1vw;
-            }
-        }
-        .generos{
-            margin-top:1vw;
-            span{
-                margin-right:1vw;
-            }
-        }
-        .companiesProduction{
-            display:flex;
-            flex-direction: row;
-            margin-top:1vw;
-            span{
-                img{
-                    width:5vw;
-                    background-color:white;
-                }
-            }
+      }
+      .trailer{
+        a{
+            font-size:3.5vw;
         }
     }
-}
-.actores{
-    display:flex;
-    flex-direction:row;
-    background-color:white;
-    padding: 0 20vw;
-    margin-top:2vw;
+    .descripcion{
+        p{
+            text-align:justify;
+            font-size:3.5vw;
+        }
+    }
+      .idiomas {
+        span {
+          font-size: 3.5vw;
+        }
+      }
+      .valoraciones{
+          span{
+              font-size:3.5vw;
+          }
+      }
+      .generos{
+        span{
+            font-size:3.5vw;
+        }
+    }
+
+      .similares {
+        margin-top: 2vw;
+
+        a {
+          padding-right: 1vw;
+          font-size:3.5vw;
+        }
+      }
+
+      .duracionFecha {
+        display: flex;
+        flex-direction: row;
+
+        span {
+          margin-right: 1vw;
+        }
+      }
+
+      .idiomas {
+        display: flex;
+        flex-direction: row;
+        margin-top: 1vh;
+
+        span {
+          margin-right: 1vw;
+        }
+      }
+      .companiesProduction {
+        display: flex;
+        flex-direction: row;
+        margin-top: 1vw;
+
+        span {
+          img {
+            width: 6vw;
+            background-color: white;
+          }
+        }
+      }
+    }
+  }
+
+  .actores {
+    display: flex;
+    flex-direction: row;
+    background-color: white;
+    padding: 0 10vw;
+    margin-top: 2vw;
     flex-wrap: wrap;
-    a{
-        color:black;
+
+    a {
+      color: black;
+      font-size:3.5vw;
     }
+  }
 }
-    

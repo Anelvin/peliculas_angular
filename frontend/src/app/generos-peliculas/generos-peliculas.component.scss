@@ -1,33 +1,115 @@
+.componenteGeneros {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  background-color: white;
+  color: #000000;
 
-.componenteGeneros{
+  h5 {
+    color: black;
+    margin-left: 1vw;
+  }
+
+  .contenedorGeneros {
     display: flex;
     flex-direction: column;
-    position: relative;
-    background-color:white;
-    color:#000000;
-    h5{
-        color:black;
-        margin-left:1vw;
+    width: 40%;
+    height: 20vh;
+    flex-wrap: wrap;
+    overflow: auto;
+    margin-left: 1vw;
+    background-color: white;
+    padding: 1vw;
+    border-radius: 4px;
+    box-shadow: 2px 2px 2px 2px #000000;
+
+    .contenedorInputs {
+      position: relative;
+      display: flex;
+      overflow: auto;
+      align-items: center;
+      background-color: white;
+      color: black;
     }
-    .contenedorGeneros{
-        display:flex;
-        flex-direction: column;
-        width:40%;
-        height:20vh;
-        flex-wrap: wrap;
-        overflow: auto;
-        margin-left:1vw;
-        background-color:white;
-        padding:1vw;
-        border-radius:4px;
-        box-shadow: 2px 2px 2px 2px #000000;
-        .contenedorInputs{
-            position: relative;
-            display:flex;
-            overflow: auto;
-            align-items:center;
-            background-color:white;
-            color:black;
+  }
+}
+@media (max-width:1400px) {
+    .componenteGeneros {
+      .contenedorGeneros {
+        width: 60%;
+        .contenedorInputs {
+          input {
+            font-size: 1vw;
+          }
+          span {
+            font-size: 1vw;
+          }
         }
+      }
     }
+  }
+@media (max-width:1180px) {
+    .componenteGeneros {
+      .contenedorGeneros {
+        width: 60%;
+        .contenedorInputs {
+          input {
+            font-size: 1.5vw;
+          }
+          span {
+            font-size: 1.5vw;
+          }
+        }
+      }
+    }
+  }
+
+@media (max-width:950px) {
+    .componenteGeneros {
+      .contenedorGeneros {
+        width: 60%;
+        .contenedorInputs {
+          input {
+            font-size: 1.5vw;
+          }
+          span {
+            font-size: 1.5vw;
+          }
+        }
+      }
+    }
+  }
+
+@media (max-width:750px) {
+  .componenteGeneros {
+    .contenedorGeneros {
+      width: 60%;
+      .contenedorInputs {
+        input {
+          font-size: 2vw;
+        }
+        span {
+          font-size: 2vw;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width:550px) {
+  .componenteGeneros {
+    .contenedorGeneros {
+      width: 60%;
+
+      .contenedorInputs {
+        input {
+          font-size: 2vw;
+        }
+
+        span {
+          font-size: 2.5vw;
+        }
+      }
+    }
+  }
 }
