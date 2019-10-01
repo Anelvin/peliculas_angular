@@ -48,22 +48,11 @@ export class EncineComponent implements OnInit {
   }
 
   filtroGeneros(t){
-    let existe=0;
-    this.queryGeneros='&with_genres=';
-    for(let x=0;x<this.generos.length;x++){
-      if(this.generos[x]==t){
-        existe++;
-        this.generos.splice(x,1);
-      }
-    }
-    if(existe==0){
-      this.generos.push(t);
-    }
-    for(let x=0;x<this.generos.length;x++){
-      this.queryGeneros += `${this.generos[x]},`
-    }
-    this.queryFiltrado=this.queryGeneros.substring(0, this.queryGeneros.length-1);
-    this.peliculasservice.buscarPeliculasEnCine(this.pagina,this.queryFiltrado)
+    console.log(t);
+    
+   
+    
+    this.peliculasservice.buscarPeliculasEnCine(this.pagina,t)
     .subscribe(resultado=>{
       this.peliculas=resultado['results']
       }

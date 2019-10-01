@@ -26,12 +26,14 @@ const routes: Routes = [
 },
 {
   path:'peliculas',
-  component:HeaderComponent,
+  redirectTo:'/peliculas/encine',
+  pathMatch:'full'
 },
 {
   path:'peliculas/encine',
   component:EncineComponent,
 },
+
 {
   path:'peliculas/populares',
   component:PopularesComponent,

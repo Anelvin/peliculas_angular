@@ -22,12 +22,8 @@ export class PeliculasService {
       return this.http.get(`https://api.themoviedb.org/3/movie/popular?api_key=7a5ab1a16890bdb75e5ffef8bd2ce921&page=${page}`);
     }
   }
-  buscarPeliculasEnCine(pagina,generos){
-    if(generos.length > 12){
-      return this.http.get(`https://api.themoviedb.org/3/movie/now_playing?api_key=7a5ab1a16890bdb75e5ffef8bd2ce921&language=en-US&page=${pagina}${generos}`)
-    }else{
-      return this.http.get(`https://api.themoviedb.org/3/movie/now_playing?api_key=7a5ab1a16890bdb75e5ffef8bd2ce921&language=en-US&page=${pagina}`)
-    }
+  buscarPeliculasEnCine(pagina,generos = ''){
+    return this.http.get(`https://api.themoviedb.org/3/movie/now_playing?api_key=7a5ab1a16890bdb75e5ffef8bd2ce921&language=en-US&page=${pagina}&with_genres=${generos}`)
   }
   buscarPeliculaDetalle(id){
     return this.http.get(`https://api.themoviedb.org/3/movie/${id}?api_key=7a5ab1a16890bdb75e5ffef8bd2ce921&language=en-US
